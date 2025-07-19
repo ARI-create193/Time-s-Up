@@ -21,7 +21,7 @@ export const WatchDetail: React.FC = () => {
   useEffect(() => {
     const fetchWatch = async () => {
       setLoading(true);
-      const response = await fetch(`http://localhost:3001/api/watches?page=1&limit=1000`);
+      const response = await fetch(`https://time-s-up.onrender.com/api/watches?page=1&limit=1000`);
       const result = await response.json();
       const found = result.data.find((w: any) =>
         (w["Brand"] || '').toLowerCase() === decodeURIComponent(brand || '').toLowerCase() &&

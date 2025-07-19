@@ -27,7 +27,7 @@ export const WatchCatalog: React.FC = () => {
   const fetchWatches = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3001/api/watches?page=${page}&limit=${limit}`);
+      const response = await fetch(`https://time-s-up.onrender.com/api/watches?page=${page}&limit=${limit}`);
       const result = await response.json();
       setWatches(result.data);
       setTotal(result.total);
